@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* GLOBAL RESET */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #E0D9D9;
+}
+
+/* =========================
+   AUTH LAYOUT (LOGIN + REGISTER)
+   ========================= */
+
+.auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MAIN CARD */
+.auth-card {
+  width: 1000px;
+  max-width: 95%;
+  display: flex;
+  background: #ffffff;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease;
+}
+
+.auth-card:hover {
+  transform: translateY(-6px);
+}
+
+/* =========================
+   LEFT IMAGE SECTION
+   ========================= */
+
+.auth-image {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* IMAGE OVERLAY */
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(47, 87, 85, 0.85),
+    rgba(90, 150, 144, 0.85)
+  );
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.image-overlay h3 {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.image-overlay p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* =========================
+   FORM SECTION
+   ========================= */
+
+.auth-form {
+  flex: 1;
+  padding: 50px;
+}
+
+.auth-form h2 {
+  color: #432323;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  color: #2F5755;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+/* INPUTS */
+.auth-form input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  border: 1px solid #cccccc;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.auth-form input:focus {
+  outline: none;
+  border-color: #5A9690;
+  box-shadow: 0 0 0 2px rgba(90, 150, 144, 0.2);
+}
+
+/* ROLE SELECTION */
+.role-box {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 25px;
+  color: #432323;
+  font-size: 14px;
+}
+
+/* BUTTON */
+.auth-form button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(to right, #432323, #2F5755);
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.auth-form button:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* SWITCH LINK */
+.switch {
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.switch a {
+  color: #5A9690;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* =========================
+   RESPONSIVE (MOBILE)
+   ========================= */
+
+@media (max-width: 768px) {
+  .auth-card {
+    flex-direction: column;
+  }
+
+  .auth-image {
+    height: 220px;
+  }
+
+  .auth-form {
+    padding: 35px;
+  }
+}
