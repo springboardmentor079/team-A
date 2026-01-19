@@ -10,6 +10,7 @@ import Officials from "./pages/dashboard/Officials.jsx";
 import HelpSupport from "./pages/dashboard/HelpSupport.jsx";
 import Settings from "./pages/dashboard/Settings.jsx";
 import Navbar from "./components/navigation/Navbar.jsx";
+// App routing setup
 
 function App() {
   return (
