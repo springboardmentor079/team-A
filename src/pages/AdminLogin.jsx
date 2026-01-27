@@ -43,9 +43,11 @@ const AdminLogin = () => {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
+        <div className="autth-links">
+          <Link to="/forgot-password">Forgot Password?</Link>
+        </div>
         <button type="submit">Login as Admin</button>
         <div className="auth-links">
-          <Link to="/forgot-password">Forgot Password?</Link>
           <Link to="/admin/register">Create Admin Account</Link>
           <Link to="/login">User Login</Link>
         </div>

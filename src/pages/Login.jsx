@@ -40,9 +40,12 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-        <button type="submit">Login</button>
-        <div className="auth-links">
+        
+        <div className="autth-links">
           <Link to="/forgot-password">Forgot Password?</Link>
+        </div>
+          <button type="submit">Login</button>
+        <div className="auth-links">
           <Link to="/register">Don't have an account? Register</Link>
           <Link to="/admin/login">Admin Login</Link>
         </div>

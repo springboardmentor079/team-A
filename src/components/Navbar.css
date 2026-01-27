@@ -21,11 +21,31 @@
   text-decoration: none;
 }
 
+.navv-links {
+  display: flex;
+  gap: 2rem;
+  flex: 1;
+  justify-content: right;
+}
+
+.navv-links a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.navv-links a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
 .nav-links {
   display: flex;
   gap: 2rem;
   flex: 1;
-  justify-content: center;
+  justify-content: right;
 }
 
 .nav-links a {
@@ -40,7 +60,6 @@
 .nav-links a:hover {
   background: rgba(255, 255, 255, 0.1);
 }
-
 .nav-user {
   display: flex;
   align-items: center;

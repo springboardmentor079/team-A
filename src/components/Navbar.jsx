@@ -16,7 +16,8 @@ const Navbar = () => {
     return (
       <nav className="navbar">
         <Link to="/" className="nav-brand">CivicX Platform</Link>
-        <div className="nav-links">
+        <div className="navv-links">
+          <Link to="/">Home</Link>
           <Link to="/login">Login</Link>
           <Link to="/register">Register</Link>
           <Link to="/admin/login">Admin</Link>

@@ -10,7 +10,7 @@
 
 .auth-container::before {
   content: '';
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -25,6 +25,36 @@
 }
 
 .auth-container::after {
+  content: none;
+}
+
+.autth-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  margin-top: 7rem;
+}
+
+.autth-container::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/court.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(0.5px);
+  opacity: 0.9;
+  z-index: 0;
+}
+
+.autth-container::after {
   content: none;
 }
 
@@ -90,6 +120,19 @@
 }
 
 .auth-links a {
+  color: #667eea;
+  text-decoration: none;
+}
+
+.autth-links {
+  margin-bottom: 0.5rem;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  /* gap: 0.5rem; */
+}
+
+.autth-links a {
   color: #667eea;
   text-decoration: none;
 }
