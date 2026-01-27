@@ -1,34 +1,52 @@
-import { Routes, Route } from "react-router-dom";
-import Landing from "./pages/Landing.jsx";
-import Login from "./pages/auth/Login.jsx";
-import Register from "./pages/auth/Register.jsx";
-import Dashboard from "./pages/dashboard/Dashboard.jsx";
-import Petitions from "./pages/dashboard/Petitions.jsx";
-import Polls from "./pages/dashboard/Polls.jsx";
-import Reports from "./pages/dashboard/Reports.jsx";
-import Officials from "./pages/dashboard/Officials.jsx"; 
-import HelpSupport from "./pages/dashboard/HelpSupport.jsx";
-import Settings from "./pages/dashboard/Settings.jsx";
-import Navbar from "./components/navigation/Navbar.jsx";
-// App routing setup
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { AuthProvider } from './context/AuthContext';
+import { ThemeProvider } from './context/ThemeContext';
+import Landing from './pages/Landing';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import AdminLogin from './pages/AdminLogin';
+import AdminRegister from './pages/AdminRegister';
+import ForgotPassword from './pages/ForgotPassword';
+import Dashboard from './pages/Dashboard';
+import Petitions from './pages/Petitions';
+import Polls from './pages/Polls';
+import Reports from './pages/Reports';
+import Profile from './pages/Profile';
+import SettingsPage from './pages/SettingsPage';
+import Help from './pages/Help';
+import Navbar from './components/Navbar';
+import Sidebar from './components/Sidebar';
+import './App.css';
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/petitions" element={<Petitions />} />
-        <Route path="/polls" element={<Polls />} />
-        <Route path="/reports" element={<Reports />} />
-        <Route path="/officials" element={<Officials />} />
-        <Route path="/help-support" element={<HelpSupport />} />
-        <Route path="/settings" element={<Settings />} />
-      </Routes>
-    </>
+    <ThemeProvider>
+      <AuthProvider>
+        <BrowserRouter>
+          <div className="app">
+            <Navbar />
+            <Sidebar />
+            <div className="content">
+              <Routes>
+                <Route path="/" element={<Landing />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/admin/login" element={<AdminLogin />} />
+                <Route path="/admin/register" element={<AdminRegister />} />
+                <Route path="/forgot-password" element={<ForgotPassword />} />
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/petitions" element={<Petitions />} />
+                <Route path="/polls" element={<Polls />} />
+                <Route path="/reports" element={<Reports />} />
+                <Route path="/profile" element={<Profile />} />
+                <Route path="/settings" element={<SettingsPage />} />
+                <Route path="/help" element={<Help />} />
+              </Routes>
+            </div>
+          </div>
+        </BrowserRouter>
+      </AuthProvider>
+    </ThemeProvider>
   );
 }
 

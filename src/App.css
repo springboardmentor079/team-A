@@ -1,107 +1,50 @@
-/* OFFSET FOR FIXED NAVBAR */
-body {
-  padding-top: 64px;
+:root[data-theme="light"] {
+  --bg-primary: #f5f7fa;
+  --bg-secondary: #ffffff;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --border-color: #e0e0e0;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --card-bg: #ffffff;
+  --input-bg: #ffffff;
 }
 
-/* NAVBAR */
-.lp-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  padding: 0.75rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(20px);
-  max-width: 1200px;
-  margin: 0 auto;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+:root[data-theme="dark"] {
+  --bg-primary: #1a1a2e;
+  --bg-secondary: #16213e;
+  --text-primary: #ffffff;
+  --text-secondary: #b8b8b8;
+  --border-color: #2d3748;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  --card-bg: #16213e;
+  --input-bg: #0f1419;
 }
 
-/* BRAND */
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-weight: 700;
-  font-size: 1.4rem;
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-.logo-box {
-  width: 42px;
-  height: 42px;
-  background: linear-gradient(135deg, #2563eb, #3b82f6);
-  display: grid;
-  place-items: center;
-  color: white;
-  border-radius: 12px;
+.app {
+  min-height: 100vh;
+  background: var(--bg-primary);
 }
 
-/* LINKS */
-.nav-links {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
+.content {
+  min-height: calc(100vh - 70px);
+  background: var(--bg-primary);
+  transition: margin-left 0.3s ease;
 }
 
-.outline {
-  padding: 0.6rem 1.6rem;
-  border-radius: 999px;
-  border: 2px solid #2563eb;
-  color: #2563eb;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 500;
+/* Add left margin only when user is logged in and not on auth pages */
+body:has(.sidebar) .content {
+  margin-left: 280px;
+  margin-top: 70px;
 }
 
-.outline:hover {
-  background: #2563eb;
-  color: white;
+/* No margin for landing and auth pages */
+.content:has(.landing),
+.content:has(.auth-container) {
+  margin-left: 0 !important;
+  margin-top: 0 !important;
 }
 
-/* HAMBURGER */
-.hamburger {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-/* MOBILE MENU */
-.mobile-menu {
-  position: fixed;
-  top: 76px;
-  left: 0;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(20px);
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding: 2rem;
-  transform: translateY(-20px);
-  opacity: 0;
-  pointer-events: none;
-  transition: 0.35s ease;
-  z-index: 999;
-}
-
-.mobile-menu.show {
-  transform: translateY(0);
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .nav-links.desktop {
-    display: none;
-  }
-
-  .hamburger {
-    display: block;
-  }
-}

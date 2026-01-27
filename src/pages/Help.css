@@ -1,0 +1,299 @@
+.help-page {
+  min-height: 100vh;
+  background: var(--bg-primary);
+}
+
+.help-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px 40px;
+}
+
+.help-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.help-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.help-header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  color: var(--text-secondary);
+}
+
+.help-tabs {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.help-tabs button {
+  padding: 12px 30px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s;
+  backdrop-filter: blur(10px);
+}
+
+.help-tabs button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.help-tabs button.active {
+  background: white;
+  color: #667eea;
+  font-weight: 600;
+}
+
+.help-content {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+}
+
+/* FAQ Section */
+.faq-category {
+  margin-bottom: 40px;
+}
+
+.faq-category h2 {
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.faq-item {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.faq-item:hover {
+  border-color: #667eea;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.1);
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
+  background: #f8f9fa;
+  transition: background 0.3s;
+}
+
+.faq-question:hover {
+  background: #f0f2f5;
+}
+
+.faq-item.open .faq-question {
+  background: #667eea;
+  color: white;
+}
+
+.faq-question h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.faq-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  min-width: 30px;
+  text-align: center;
+}
+
+.faq-answer {
+  padding: 20px;
+  background: white;
+  animation: slideDown 0.3s ease;
+}
+
+.faq-answer p {
+  margin: 0;
+  line-height: 1.6;
+  color: #666;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Guides Section */
+.guides-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.guide-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 30px;
+  border-radius: 15px;
+  color: white;
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+}
+
+.guide-card h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.guide-steps {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.guide-steps li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+/* Contact Section */
+.contact-section {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  text-align: center;
+}
+
+.contact-card h2 {
+  color: #667eea;
+  margin-bottom: 10px;
+}
+
+.contact-card > p {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.contact-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.contact-method {
+  padding: 30px;
+  border: 2px solid #f0f0f0;
+  border-radius: 15px;
+  transition: all 0.3s;
+}
+
+.contact-method:hover {
+  border-color: #667eea;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+}
+
+.contact-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.contact-method h3 {
+  color: #333;
+  margin: 10px 0;
+}
+
+.contact-method p {
+  color: #667eea;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.response-time {
+  display: block;
+  color: #999;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.quick-tips {
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: left;
+  margin-top: 40px;
+}
+
+.quick-tips h3 {
+  color: #667eea;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.quick-tips ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quick-tips li {
+  padding: 10px 0;
+  color: #666;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .help-container {
+    padding: 80px 15px 30px;
+  }
+
+  .help-header h1 {
+    font-size: 2rem;
+  }
+
+  .help-content {
+    padding: 25px;
+  }
+
+  .help-tabs button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .guides-section {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-methods {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,342 @@
+.petitions {
+  padding: 2rem;
+  background: var(--bg-primary);
+  min-height: calc(100vh - 70px);
+}
+
+.petitions h1, .petitions h2, .petitions h3 {
+  color: var(--text-primary);
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.tab {
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.tab:hover {
+  color: var(--text-primary);
+}
+
+.tab.active {
+  color: #667eea;
+  border-bottom-color: #667eea;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.header button {
+  padding: 0.75rem 1.5rem;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Filter Section */
+.filter-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.search-input {
+  padding: 0.75rem;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--input-bg);
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.search-input::placeholder {
+  color: var(--text-secondary);
+}
+
+.filter-select {
+  padding: 0.75rem;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--input-bg);
+  color: var(--text-primary);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.petition-form {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid var(--border-color);
+}
+
+.petition-form h3 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-primary);
+}
+
+.petition-form input,
+.petition-form textarea,
+.petition-form select {
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  background: var(--input-bg);
+  color: var(--text-primary);
+}
+
+.petition-form .form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.petition-form .form-field label {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.petition-form input::placeholder,
+.petition-form textarea::placeholder {
+  color: var(--text-secondary);
+}
+
+.petitions-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.petition-card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+}
+
+.petition-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.petition-card h3 {
+  color: var(--text-primary);
+  margin: 0;
+  flex: 1;
+}
+
+.petition-card p {
+  color: var(--text-secondary);
+  margin: 0.5rem 0;
+}
+
+.category-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.category-badge.transport { background: #e3f2fd; color: #1976d2; }
+.category-badge.education { background: #f3e5f5; color: #7b1fa2; }
+.category-badge.safety { background: #fff3e0; color: #e65100; }
+.category-badge.women-safety { background: #fce4ec; color: #c2185b; }
+.category-badge.healthcare { background: #e8f5e9; color: #388e3c; }
+.category-badge.environment { background: #e0f2f1; color: #00796b; }
+.category-badge.infrastructure { background: #f1f8e9; color: #689f38; }
+.category-badge.employment { background: #fff9c4; color: #f57f17; }
+.category-badge.housing { background: #ede7f6; color: #512da8; }
+.category-badge.other { background: #eceff1; color: #455a64; }
+
+.petition-meta {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.petition-meta span {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.days-remaining {
+  color: #2196f3 !important;
+  font-weight: 600;
+}
+
+.expired {
+  color: #f44336 !important;
+  font-weight: 600;
+}
+
+.status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.875rem;
+}
+
+.status.active {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status.achieved {
+  background: #cce5ff;
+  color: #004085;
+}
+
+.status.closed {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+@media (max-width: 768px) {
+  .filter-section {
+    grid-template-columns: 1fr;
+  }
+  
+  .petition-header {
+    flex-direction: column;
+  }
+}
+
+
+/* Share Button and Menu */
+.petition-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.share-container {
+  position: relative;
+}
+
+.sign-btn {
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.share-btn {
+  padding: 0.5rem 1rem;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 2px solid var(--border-color);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.share-btn:hover {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.share-menu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 150px;
+  z-index: 100;
+  animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.share-option {
+  padding: 0.5rem 1rem;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.share-option:hover {
+  background: #667eea;
+  color: white;
+}
+
+.share-option.whatsapp:hover {
+  background: #25D366;
+}
+
+.share-option.twitter:hover {
+  background: #1DA1F2;
+}
+
+.share-option.facebook:hover {
+  background: #1877F2;
+}
+
+@media (max-width: 768px) {
+  .petition-actions {
+    flex-direction: column;
+  }
+  
+  .share-menu {
+    right: auto;
+    left: 0;
+  }
+}
